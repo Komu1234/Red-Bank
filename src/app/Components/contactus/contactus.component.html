@@ -1,0 +1,36 @@
+<div class="divclass">
+    <button type="submit" (click)="onExUser('login')" class="btn btn-success"><a routerLink="/login">Existing User</a> </button> <br>
+    <button type="submit" (click)="onNewUser('signup')" class="btn btn-success"><a routerLink="/signup"></a> New User</button>
+    
+</div>
+
+
+
+<div *ngIf="isLoggedIn; else loginPrompt">
+    <h2>Feedback Form</h2>
+    <form class="feedback-form" action="/submit-feedback" method="POST">
+
+    
+        <h1>Query Form</h1>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+    
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+    
+        <label for="feedback">Your Feedback</label>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback" required></textarea>
+    
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <ng-template #loginPrompt>
+    <div class="divclass">
+        <button type="submit" (click)="onExUser('login')" class="btn btn-success"><a routerLink="/login">Existing User</a> </button> <br>
+        <button type="submit" (click)="onNewUser('signup')" class="btn btn-success"><a routerLink="/signup"></a> New User</button>
+        
+    </div>
+  </ng-template>
+
+

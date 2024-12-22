@@ -5,10 +5,13 @@ import { DeleteDonorComponent } from './Components/delete-donor/delete-donor.com
 import { LoginComponent } from './Components/login/login.component';
 import { AboutComponent } from './Components/about/about.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import { ContactusComponent } from './Components/contactus/contactus.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 export const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         title: 'App Home Page',
         component: HomeComponent,
     },
@@ -28,5 +31,23 @@ export const routes: Routes = [
         title: 'App SignUp Page',
         component: SignUpComponent,
     },
+
+    {
+        path: 'contactus',
+        title: 'App ContactUs Page',
+        component: ContactusComponent,
+    },
+
+    {
+        path: 'dashboard',
+        title: 'DashBoard',
+        component: DashboardComponent,
+    },
+
+    {
+        path: 'navbar',
+        title: 'DashBoard',
+        component: NavbarComponent,
+    }
 
 ];
